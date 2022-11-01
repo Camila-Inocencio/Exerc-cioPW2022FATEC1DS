@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="img/favicon192x192.png" rel="shortcut icon">
+    <title>oViajar</title>
+</head>
+
+<body>
+    <header>
+        <div class="title">
+            <h1><img src="img/aviao_papel.png" alt="aviao">oViajar</h1>
+        </div>
+
+        <div class="title">
+            <p id="ptitle">Em qualquer lugar, com você.</p>
+        </div>
+    </header>
+
+    <div class="form">
+        <form action="#" method="#">
+            <div class="title2">
+                <h2>Cadastre-se</h2>
+            </div>
+
+            <div class="input_i">
+                <label for="nome">Nome: </label>
+                <input type="text" name="nome" id="nome" placeholder="Digite seu nome" required>
+            </div>
+
+            <div class="input_i">
+                <label for="sobrenome">Sobrenome: </label>
+                <input type="text" name="sobrenome" id="sobrenome" placeholder="Digite seu sobrenome" required>
+            </div>
+
+            <div class="input_m esp" id="data">
+                <label for="data_nasc">Data de Nascimento:</label>
+                <input type="date" name="data_nasc" id="data_nasc" placeholder="Digite sua data de nascimento" required>
+            </div>
+
+            <div class="input_foto">
+                <label for="foto">FOTO DE PERFIL</label>
+                <input type="file" name="foto" id="foto">
+            </div>
+
+            <div class="input_i radio">
+                <p>Sexo:</p>
+                <div class="inI">
+                    <input type="radio" name="sexo" value="masculino" id="masculino">
+                    <label for="masculino" id="masc">Masculino</label>
+                </div>
+
+                <div class="inII">
+                    <input type="radio" name="sexo" value="feminino" id="feminino">
+                    <label for="feminino" id="fem">Feminino</label>
+                </div>
+
+                <div class="inIII">
+                    <input type="radio" name="sexo" value="outro" id="outro">
+                    <label for="outro" id="out">Outro</label>
+                </div>
+
+                <div class="inIV">
+                    <input type="radio" name="sexo" value="pnd" id="pnd">
+                    <label for="pnd" id="prnd">Prefiro não dizer</label>
+                </div>
+            </div>
+
+            <div class="input_m esp">
+                <label for="rg">RG: </label>
+                <input type="text" name="rg" placeholder="Digite seu RG" id="rg" required>
+            </div>
+
+            <div class="input_m">
+                <label for="cpf">CPF: </label>
+                <input type="text" name="cpf" placeholder=" XXX.XXX.XXX-XX" id="cpf" required>
+            </div>
+
+            <div class="input_m esp">
+                <label for="estado">Estado: </label>
+                <select id="estado" name="estado">
+                    <option selected disabled value="">Selecione</option>
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                    <option value="EX">Estrangeiro</option>
+                </select>
+            </div>
+
+            <div class="input_m" id="esp">
+                <label for="cep">CEP: </label>
+                <input type="text" name="cep" id="cep" placeholder="Digite seu CEP" required>
+            </div>
+
+            <div class="input_m esp">
+                <label for="cidade">Cidade: </label>
+                <input type="text" name="cidade" id="cidade" placeholder="Digite sua cidade" required>
+            </div>
+
+            <div class="input_m">
+                <label for="bairro">Bairro: </label>
+                <input type="text" name="bairro" id="bairro" placeholder="Digite seu bairro" required>
+            </div>
+
+            <div class="input_m esp">
+                <label for="rua">Rua: </label>
+                <input type="text" name="rua" id="rua" placeholder="Digite sua rua" required>
+            </div>
+
+            <div class="input_m">
+                <label for="num">Número: </label>
+                <input type="number" name="num" id="num" placeholder="Digite o número da sua residência" min="0" required>
+            </div>
+
+            <div class="input_i">
+                <label for="complemento">Complemento: </label>
+                <input type="text" name="complemento" id="complemento" placeholder="Digite o complemento">
+            </div>
+
+            <p>Contato: </p>
+
+            <div class="input_i">
+                <label for="email">E-mail:</label>
+                <input type="email" name="email" id="email" placeholder="Digite seu e-mail" required>
+            </div>
+
+            <div class="input_i">
+                <label for="tel">Telefone: </label>
+                <input type="tel" name="tel" id="tel" placeholder="(DDD) XXXXX-XXXX" maxlength="18" required>
+            </div>
+
+            <div class="input_i">
+                <label for="mensagem">Mensagem: </label>
+                <textarea name="mensagem" rows="5" id="mensagem" placeholder="Digite sua mensagem aqui:)"></textarea>
+            </div>
+
+            <div class="input_i">
+                <label for="senha">Senha: </label>
+                <input type="password" name="senha" id="senha" placeholder="Digite sua senha" required>
+            </div>
+
+            <div class="button_reset input_m esp" id="medi">
+                <input type="reset" value="Apagar" id="reset">
+            </div>
+
+            <div class="button_submit input_m" id="med">
+                <input type="submit" value="Enviar" id="cadastro">
+            </div>  
+        </form>
+    </div>
+</body>
+
+</html>
