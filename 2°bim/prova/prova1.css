@@ -1,0 +1,73 @@
+.cont{
+    margin: 35px 30px;
+    height: 550px;
+    position: relative;
+}
+.q1{
+    background-color: #ee2626;
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    position: absolute;
+}
+.q1:hover{
+    background-color: #ee2626;
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    position: absolute;
+    right: 0px;
+}
+.q2{
+    background-color: #141414;
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    position: absolute;
+    top: 150px;
+    right: 0px;
+}
+.q2:hover{
+    background-color: #141414;
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    position: absolute;
+    top: 150px;
+    left: 0px;
+}
+.q3{
+    background-color: #e20d5f;
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    position: absolute;
+    bottom: 150px;
+}
+.q3:hover{
+    background-color: #e20d5f;
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    position: absolute;
+    bottom: 150px;
+    right: 0px;
+}
+.q4{
+    background-color: #a7df0d;
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+.q4:hover{
+    background-color: #a7df0d;
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+}

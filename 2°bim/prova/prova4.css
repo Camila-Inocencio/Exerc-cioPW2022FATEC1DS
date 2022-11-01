@@ -1,0 +1,41 @@
+*{
+    margin: 10px;
+}
+.branco{
+    background-color: white;
+    width: 89%;
+    height: 10%;
+    border: 5px solid black;
+    position: absolute;
+    left: 0%;
+    z-index: 1;
+}
+.amarelo{
+    background-color: #FF0;
+    width: 5%;
+    height: 75%;
+    border: 5px solid black;
+    position: absolute;
+    right: 0%;
+    z-index: 2;
+}
+.ciano{
+    background-color: #00fff9;
+    width: 89%;
+    height: 10%;
+    border: 5px solid black;
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    z-index: 3;
+}
+.rosa{
+    background-color: #f0f;
+    width: 5%;
+    height: 75%;
+    border: 5px solid black;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    z-index: 4;
+}

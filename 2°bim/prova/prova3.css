@@ -1,0 +1,11 @@
+.azul{
+    width: 75%;
+    height: 55%;
+    background-color: #00fff9;
+    border-top: 8px solid black;
+    border-right: none;
+    border-bottom: 3px solid black;
+    border-left: 3px solid white;
+    position: absolute;
+    z-index: 2;
+}

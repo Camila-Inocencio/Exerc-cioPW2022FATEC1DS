@@ -1,0 +1,19 @@
+.flex{
+    display: flex;
+    height: 95vh;
+    width: 99vw;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.amarelo{
+    width: 85%;
+    height: 75%;
+    background-color: #ff0;
+    border-top: 5px dashed black;
+    border-right: 5px solid black;
+    border-bottom: 5px solid #f0f;
+    border-left: 8px solid black;
+    position: absolute;
+    z-index: 1;
+}
