@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes Ianima {
+    0%   {background-color:rgb(66, 95, 87); left:0px; top:0px;}
+    25%  {background-color:rgb(116, 159, 130); left: 100px; top:0px;}
+    50%  {background-color:rgb(168, 232, 144); left:100px; top:100px;}
+    75%  {background-color:rgb(207, 255, 141); left:0px; top:100px;}
+    100% {background-color:rgb(66, 95, 87); left:0px; top:0px;}
+}
+
+.animaI{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    animation-name: Ianima;
+    animation-duration: 5s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+}
+
+@keyframes IIanima {
+    0%   {background-color:rgb(66, 95, 87); left: 0px; top:0px;}
+    25%  {background-color:rgb(116, 159, 130); left:-100px; top:0px;}
+    50%  {background-color:rgb(168, 232, 144); left:-100px; top:-100px;}
+    75%  {background-color:rgb(207, 255, 141); left:0px; top:-100px;}
+    100% {background-color:rgb(66, 95, 87); left:0px; top:0px;}
+}
+
+.animaII{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    animation-name: IIanima;
+    animation-duration: 5s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+}

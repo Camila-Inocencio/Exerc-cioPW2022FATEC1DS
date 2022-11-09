@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 4</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <script>
+        /* Eventos onmouseover e onmouseout.
+        
+           Nesse exemplo, as funções onMOut e onMOver especificam o que acontece
+           com a tag button quando o mouse do usuário fica sobre(onmouseover) ou 
+           fora(onmouseout) da tag, a partir dos eventos onmouseover e onmouseout.
+        */
+        function onMOut(){
+            let exemplo = document.getElementById("exemplo1");
+            exemplo.innerHTML = "onmouseout";
+            exemplo.style.padding = "10px";
+            exemplo.style.backgroundColor = "#774360";
+            exemplo.style.borderRadius = "8px";
+            exemplo.style.border = "dashed 3px #B25068";
+            exemplo.style.color = "rgb(249, 249, 185)";
+        }
+        function onMOver(){
+            let exemplo = document.getElementById("exemplo1");
+            exemplo.innerHTML = "onmouseover";
+            exemplo.style.padding = "10px";
+            exemplo.style.backgroundColor = "#9A1663";
+            exemplo.style.borderRadius = "8px";
+            exemplo.style.border = "dashed 5px #B25068";
+            exemplo.style.color = "rgb(249, 249, 185)";
+        }
+
+        /* Eventos onfocus e onblur.
+
+           Nesses eventos, é possível mudar o que acontece durante(onfocus) e depois(onblur) que 
+           a tag é selecionada pelo usuário. 
+           Para funcionarem, criei duas funções, onde a onFocus() é acionada quando o botão é clicado,
+           e a onBlur é acionada quando o botão deixa de ser utilizado.
+        */
+       function onFocus(){
+            let exemplo = document.getElementById("exemplo2");
+            exemplo.style.boxShadow = "2px 2px 8px #0000004e";
+            exemplo.style.outline = "3px ridge #C689C6";
+            exemplo.style.backgroundColor = "rgb(225, 196, 241)";
+       }
+       function onBlur(){
+            let exemplo = document.getElementById("exemplo2");
+            exemplo.style.border = "dashed 3px #B25068";
+            exemplo.style.outline = "none";
+            exemplo.style.backgroundColor = "rgb(242, 218, 255)";
+        }
+
+        /* Evento onchange.
+
+           O evento onchange só ocorre quando o valor de um elemento é alterado. Para demonstrar isso,
+           utilizei a tag select, e a cada escolha do usuário a função desenho é acionada, trocando a 
+           imagem que será mostrada.
+        */
+        function desenho(img) {
+            var image = document.getElementById("image");
+            image.src = img.value;
+        }
+    </script>
+    <!-- Eventos onmouseover e onmouseout -->
+    <button id="exemplo1" onmouseout="onMOut()" onmouseover="onMOver()">onmouseout</button>
+
+    <hr>
+    <!-- Eventos onfocus e onblur -->
+    <div class="exemplo2">
+        <label for="exemplo2">Eventos onfucus e onblur:</label>
+        <input type="text" id="exemplo2" onfocus="onFocus()" onblur="onBlur()" name="exemplo2" placeholder="Exemplo ">
+    </div>
+
+    <hr>
+    <!-- Evento onchange -->
+    <div class="exemplo3">
+        <img id="image" src="img/selecione.jpeg" alt="Imagem">
+        <br>
+        <label for="desenhos">Selecione um desenho: </label>
+        <select id="desenhos" name="desenhos" onchange="desenho(this)">
+            <option selected disabled value="">Selecione</option>
+            <option value="img/gatinhos.jpg">Gatinhos</option>
+            <option value="img/coelinhos.jpg">Coelinhos</option>
+            <option value="img/kirby.jpg">Kirby</option>
+            <option value="img/capivaraepatos.jpg">Capivara e Patos</option>
+        </select>
+    </div>
+    <hr>
+</body>
+</html>

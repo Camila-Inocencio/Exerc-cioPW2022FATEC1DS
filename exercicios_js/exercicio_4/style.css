@@ -1,0 +1,30 @@
+body {
+    background-color: #4C3A51;
+}
+
+label {
+    color: rgb(249, 249, 185);
+    font-size: large;
+}
+
+#exemplo1 {
+    padding: 10px;
+    background-color: #4C0033;
+    border: dashed 3px #B25068;
+    color: rgb(249, 249, 185);
+    border-radius: 8px;
+}
+
+#exemplo2 {
+    padding: 5px;
+    border-radius: 7px;
+}
+
+.exemplo2, .exemplo3 {
+    margin-top: 12px;
+}
+
+img {
+    height: 250px;
+}
+
