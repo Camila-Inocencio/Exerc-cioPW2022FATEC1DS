@@ -1,94 +1,105 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercício 4</title>
+    <title>Exercício 3</title>
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
-    <script>
-        /* Eventos onmouseover e onmouseout.
-        
-           Nesse exemplo, as funções onMOut e onMOver especificam o que acontece
-           com a tag button quando o mouse do usuário fica sobre(onmouseover) ou 
-           fora(onmouseout) da tag, a partir dos eventos onmouseover e onmouseout.
+    <!-- .document.getElementById(); -->
+    <div id="ById"></div>
+
+    <!-- .document.getElementsByTagName(); -->
+    <div>
+        <p>Tag p.</p>
+        <p>Tag p.</p>
+        <p>Tag p.</p>
+        <p>Tag p.</p>
+        <p>Tag p.</p>
+        <p>Tag p.</p>
+    </div>
+
+    <!-- .document.getElementsByClassName(); -->
+    <div>
+        <div class="quad"></div>
+        <div class="quad"></div>
+        <div class="quad"></div>
+    </div>
+
+    <!-- .document.querySelector(); e .document.querySelectorAll(); -->
+    <div id="querySA">
+        <h3 class="queryS">Método querySelector()</h3>
+        <p class="queryS">Método querySelector()</p>
+    </div>
+
+    <script type = "text/javascript">
+        /* O .document.getElementById() é uma função que retorna um elemento do DOM, 
+        identificado por um id especificado. 
+           Criei uma div com um id chamado "ById" para estilizar a tag.
         */
-        function onMOut(){
-            let exemplo = document.getElementById("exemplo1");
-            exemplo.innerHTML = "onmouseout";
-            exemplo.style.padding = "10px";
-            exemplo.style.backgroundColor = "#774360";
-            exemplo.style.borderRadius = "8px";
-            exemplo.style.border = "dashed 3px #B25068";
-            exemplo.style.color = "rgb(249, 249, 185)";
-        }
-        function onMOver(){
-            let exemplo = document.getElementById("exemplo1");
-            exemplo.innerHTML = "onmouseover";
-            exemplo.style.padding = "10px";
-            exemplo.style.backgroundColor = "#9A1663";
-            exemplo.style.borderRadius = "8px";
-            exemplo.style.border = "dashed 5px #B25068";
-            exemplo.style.color = "rgb(249, 249, 185)";
-        }
 
-        /* Eventos onfocus e onblur.
+        let elementId = document.getElementById("ById");
+        elementId.style.width = "250px";
+        elementId.style.height = "100px";
+        elementId.style.backgroundColor = "rgb(247, 164, 64)";
+        elementId.style.border = "double 5px rgb(225, 112, 26)";
+        elementId.style.marginBottom = "10px"
+        elementId.innerHTML = "<h2>.getElementById</h2>";
 
-           Nesses eventos, é possível mudar o que acontece durante(onfocus) e depois(onblur) que 
-           a tag é selecionada pelo usuário. 
-           Para funcionarem, criei duas funções, onde a onFocus() é acionada quando o botão é clicado,
-           e a onBlur é acionada quando o botão deixa de ser utilizado.
-        */
-       function onFocus(){
-            let exemplo = document.getElementById("exemplo2");
-            exemplo.style.boxShadow = "2px 2px 8px #0000004e";
-            exemplo.style.outline = "3px ridge #C689C6";
-            exemplo.style.backgroundColor = "rgb(225, 196, 241)";
-       }
-       function onBlur(){
-            let exemplo = document.getElementById("exemplo2");
-            exemplo.style.border = "dashed 3px #B25068";
-            exemplo.style.outline = "none";
-            exemplo.style.backgroundColor = "rgb(242, 218, 255)";
-        }
+        /* O .document.getElementsByTagName é uma função que retorna todo conjunto de 
+        elementos da tag especificada, acessados por índices ([n]). 
+        Nesse exemplo, utilizei várias tags <p> para demonstrar. Acessei cada uma pelos 
+        seus índices, estilizando e alterando o texto de algumas. */
 
-        /* Evento onchange.
+        document.getElementsByTagName("div")[1].style.width = "250px";
+        document.getElementsByTagName("div")[1].style.height = "220px";
+        document.getElementsByTagName("div")[1].style.backgroundColor = "#AAAAAA";
+        document.getElementsByTagName("div")[1].style.border = "dotted 5px #90A17D";
+        document.getElementsByTagName("div")[1].style.marginBottom = "10px";
+        document.getElementsByTagName("p")[1].innerHTML = "Alterado.";
+        document.getElementsByTagName("p")[3].innerHTML = "Alterado.";
+        document.getElementsByTagName("p")[5].innerHTML = "Alterado.";
 
-           O evento onchange só ocorre quando o valor de um elemento é alterado. Para demonstrar isso,
-           utilizei a tag select, e a cada escolha do usuário a função desenho é acionada, trocando a 
-           imagem que será mostrada.
-        */
-        function desenho(img) {
-            var image = document.getElementById("image");
-            image.src = img.value;
-        }
+        /* O getElementsByClassName() é um método que retorna todos os elementos com a 
+        classe especificada. 
+        Para demonstrar, criei três divs, e acessei cada uma pelos seus índices. Formei 
+        três quadradinhos coloridos:) */
+
+        const quadrados = document.getElementsByClassName("quad");
+        quadrados[0].style.width = "86.6px";
+        quadrados[0].style.height = "84px";
+        quadrados[0].style.backgroundColor = "#30475E";
+        quadrados[0].style.borderRadius = "6px";
+        quadrados[1].style.marginLeft = "86.7px";
+        quadrados[1].style.marginTop = "-84px";
+        quadrados[1].style.width = "86.6px";
+        quadrados[1].style.height = "84px";
+        quadrados[1].style.backgroundColor = "#F1935C";
+        quadrados[1].style.borderRadius = "6px";
+        quadrados[2].style.marginLeft = "173.8px";
+        quadrados[2].style.marginTop = "-84px";
+        quadrados[2].style.width = "86.6px";
+        quadrados[2].style.height = "84px";
+        quadrados[2].style.backgroundColor = "#E7B2A5";
+        quadrados[2].style.borderRadius = "6px";
+
+        /* O método querySelector() retorna o primeiro elemento filho que corresponda a 
+        um ou mais seletores CSS especificados e o método querySelectorAll() retorna todos 
+        os elementos que correspondem a um ou mais seletores CSS.
+
+        Para demonstrá-los, criei uma div com outras duas tags dentro, um <h3> e a outra 
+        <p>. Com o método querySelector(), acessei a primeira tag, o <h3>, e depois utilizei o 
+        método querySelectorAll() para acessar todos de uma vez. */
+
+        document.querySelector(".queryS").style.backgroundColor = "#FF731D";
+
+        var qSA = document.getElementById("querySA").querySelectorAll(".queryS");
+        qSA[0].style.border = "dashed 2px #E14D2A";
+        qSA[0].innerHTML = "Método querySelector() e Método querySelectorAll()";
+        qSA[1].innerHTML = "Método querySelector() e Método querySelectorAll()";
+        qSA[1].style.border = "dashed 2px #E14D2A";
     </script>
-    <!-- Eventos onmouseover e onmouseout -->
-    <button id="exemplo1" onmouseout="onMOut()" onmouseover="onMOver()">onmouseout</button>
-
-    <hr>
-    <!-- Eventos onfocus e onblur -->
-    <div class="exemplo2">
-        <label for="exemplo2">Eventos onfucus e onblur:</label>
-        <input type="text" id="exemplo2" onfocus="onFocus()" onblur="onBlur()" name="exemplo2" placeholder="Exemplo ">
-    </div>
-
-    <hr>
-    <!-- Evento onchange -->
-    <div class="exemplo3">
-        <img id="image" src="img/selecione.jpeg" alt="Imagem">
-        <br>
-        <label for="desenhos">Selecione um desenho: </label>
-        <select id="desenhos" name="desenhos" onchange="desenho(this)">
-            <option selected disabled value="">Selecione</option>
-            <option value="img/gatinhos.jpg">Gatinhos</option>
-            <option value="img/coelinhos.jpg">Coelinhos</option>
-            <option value="img/kirby.jpg">Kirby</option>
-            <option value="img/capivaraepatos.jpg">Capivara e Patos</option>
-        </select>
-    </div>
-    <hr>
 </body>
 </html>
