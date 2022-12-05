@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Inconsolata', monospace;
+}
+
+h1 {
+    font-size:40px;
+    margin-bottom: 20px;
+    border-bottom: 3px dashed #96ad70;
+}
+
+body {
+    background-color: #395144;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    border: 0;
+    transition: background 0.2s linear;
+}
+
+.light-mode {
+    background: #88b38c;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.cb {
+    opacity: 0;
+    position: absolute;
+}
+
+.cb:checked + .buttmode .ball {
+    transform: translateX(24px);
+}
+
+.fa-moon{
+    color: #302746;
+}
+
+.fa-sun {
+    color: #638665e5;
+}
+
+.buttmode {
+    background-color: #96ad70;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    transform: scale(1.4);
+    height: 26px;
+    width: 50px;
+    padding: 5px;
+}
+
+.buttmode .ball{
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 22px;
+    height: 22px;
+    transform: translateX(0px);
+    transition: transform 0.2s linear;
+}
+
+form{
+    color: #fffff8;
+    width: 510px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    background-color: #201b2c;
+    border-radius: 10px;
+    border: 4px solid #4E6C50;
+    padding: 30px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, .212);
+}
+
+.form-light{
+    background-color: #5b7e5d;
+    border: 4px solid #3f4e40e8;
+    color: #201b2c;
+    font-weight:bolder;
+}
+
+select{
+    background-color: #84aa87d8;
+    border-radius: 5px;
+    border: 2px solid #5a725cd8;
+    padding: 8px;
+}
+
+select:focus{
+    background-color: #84aa87d8;
+    border-radius: 5px;
+    border: 2px solid #3f4e40e8;
+    padding: 8px;
+}
+
+textarea {
+    border-radius: 8px;
+    border: 3px dashed #5a725cd8;
+    width: 100%;
+    margin-bottom: 10px;
+    outline: none;
+    background-color: #84aa87e5;
+    color: #000000;
+}
+
+.textarea-light {
+    border: 3px dashed #59745bd8;
+    background-color: #91bb95e5;
+}
+
+textarea:focus {
+    border-radius: 8px;
+    border: 3px dashed #3f4e40e8;
+    width: 100%;
+    margin-bottom: 10px;
+    outline: none;
+    background-color: #84aa87e5;
+    color: #000000;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 2px solid #5a725cd8;
+    border-radius: 10px;
+    background-color: #84aa87d8;
+}
+
+input[type="text"]:focus {
+    width: 100%;
+    padding: 8px;
+    border: 2px solid #3f4e40e8;
+    border-radius: 10px;
+    background-color: #84aa87d8;
+}
+
+input {
+    outline: none;
+    margin-bottom: 3px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    cursor: pointer;
+    padding: 8px;
+    border: 2px solid #395043;
+    border-radius: 10px;
+    background-color: #31443a;
+    font-size: medium;
+    margin-bottom: 0;
+    color: aliceblue;
+}
+
+input[type="submit"]:hover {
+    width: 100%;
+    cursor: pointer;
+    padding: 8px;
+    border: 2px solid #28382f;
+    border-radius: 10px;
+    background-color: #3a5045;
+    font-size: medium;
+    margin-bottom: 0;
+}
+
+.valid-form {
+    margin-bottom: 10px;
+    padding-bottom: 15px;
+    position: relative;
+}
+
+.valid.success input {
+    border: 2px solid #4eca64;
+}
+
+.valid-formu.required input {
+    border: 2px solid #db5a5a;
+}
+
+.valid.success i.img-success{
+    visibility: visible;
+}
+
+.valid-formu.required i.img-required {
+    visibility: visible;
+}
+
+.valid-formu.required small{
+    color: #d65b5b;
+    visibility: visible;
+    position: absolute;
+    margin-top: 1px;
+    margin-top: 2px;
+    font-size: 14px;
+}
+
+.valid-form i {
+    position: absolute;
+    visibility: hidden;
+}
+
+.valid-form small {
+    visibility: hidden;
+}
+
+@media screen and (max-width: 650px){
+    form{
+        width: 450px;
+    }    
+    h1 {
+        font-size:35px;
+    }
+}
+
+@media screen and (max-width: 450px){
+    form{
+        width: 320px;
+    }  
+    h1 {
+        font-size:30px;
+    }  
+}

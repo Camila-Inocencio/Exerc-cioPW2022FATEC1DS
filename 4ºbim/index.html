@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="form.js" defer></script>
+    <link href="images/favicon-32x32.png" rel="shortcut icon">
+</head>
+<body>
+    <div class="container">
+        <form id="form" class="form" action="proc.php" method="post" onsubmit="return false">
+            <div class="header">
+                <h1>Formulário</h1>
+                
+                <input type="checkbox" class="cb" id="mode">
+                <label class="buttmode" for="mode">
+                    <i class="fas fa-sun"></i>
+                    <i class="fas fa-moon"></i>
+                    <div class="ball"></div>
+                </label>
+            </div>
+
+            <table>
+                <tr>
+                    <td>NOME:</td>
+                </tr>
+                <tr>
+                    <td class="valid-form">
+                        <input type="text" name="nome" id="nome" onblur="checkNome()" value="" placeholder="Nome" class="valid">
+
+                        <i><img src=""></i>
+
+                        <small>Error menssage</small>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>EMAIL:</td>
+                </tr>
+                <tr>
+                    <td class="valid-form">
+                        <input type="text" name="email" id="email" onblur="checkEmail()" onkeyup="regexemail(email)" 
+                        value="" placeholder="E-mail" class="valid">
+
+                        <i><img src=""></i>
+
+                        <small>Error menssage</small>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>CPF:</td>
+                </tr>
+                <tr>
+                    <td class="valid-form">
+                        <input type="text" name="icpf" id="icpf" size="14" maxlength="14" onblur="checkCpf()" 
+                        onkeyup="cpfMask(cpf)" placeholder="CPF" class="valid">
+
+                        <i><img src=""></i>
+
+                        <small>Error menssage</small>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>TELEFONE:</td>
+                </tr>
+                <tr>
+                    <td class="valid-form">
+                        <input type="text" name="telefone" id="telefone" size="14" maxlength="14" onblur="checkTel()" 
+                        onkeyup="telMask(telefone)" placeholder="(DDD) xxxxx-xxxx" class="valid">
+
+                        <i><img src=""></i>
+
+                        <small>Error menssage</small>
+                    </td>
+                </tr>
+                    <td class="valid-form" id="estado">
+                         ESTADO:
+                        <select name="estado" id="est" onblur="checkEst()">
+                            <option value="">----Selecione----</option>
+                            <option value="ac">Acre</option>
+                            <option value="al">Alagoas</option>
+                            <option value="am">Amazonas</option>
+                            <option value="ap">Amapá</option>
+                            <option value="ba">Bahia</option>
+                            <option value="ce">Ceará</option>
+                            <option value="df">Distrito Federal</option>
+                            <option value="es">Espírito Santo</option>
+                            <option value="go">Goiás</option>
+                            <option value="ma">Maranhão</option>
+                            <option value="mt">Mato Grosso</option>
+                            <option value="ms">Mato Grosso do Sul</option>
+                            <option value="mg">Minas Gerais</option>
+                            <option value="pa">Pará</option>
+                            <option value="pb">Paraíba</option>
+                            <option value="pr">Paraná</option>
+                            <option value="pe">Pernambuco</option>
+                            <option value="pi">Piauí</option>
+                            <option value="rj">Rio de Janeiro</option>
+                            <option value="rn">Rio Grande do Norte</option>
+                            <option value="ro">Rondônia</option>
+                            <option value="rs">Rio Grande do Sul</option>
+                            <option value="rr">Roraima</option>
+                            <option value="sc">Santa Catarina</option>
+                            <option value="se">Sergipe</option>
+                            <option value="sp">São Paulo</option>
+                            <option value="to">Tocantins</option>
+                        </select>    
+                        <i><img src=""></i>
+                        
+                        <small>Error menssage</small> 
+                    </td>
+                    
+                </tr>
+
+                <tr class="valid-form">
+                    <td>Escolha sua Fruta: </td>
+                </tr>
+                <tr>
+                    <td class="valid-form" onchange="checkRadio()">
+                        <input type="radio" name="fruta" id="frutaI" value="maça"> MAÇÃ<br>
+                        <input type="radio" name="fruta" id="frutaII" value="banana"> BANANA<br>
+                        <input type="radio" name="fruta" id="frutaIII" value="pera"> PERA<br>
+
+                        <i><img src=""></i>
+    
+                        <small>Error menssage</small>
+                    </td>
+                </tr>
+
+                <tr class="valid-form">
+                    <td>
+                        Escolha qual revista te interessa: 
+                    </td>
+                </tr>
+                <tr>
+                    <td class="valid-form" onchange="checkCheckbox()">
+                        <input type="checkbox" name="rev1" id="rev1" value="php"> PHP<br>
+                        <input type="checkbox" name="rev2" id="rev2" value="html"> HTML<br>
+                        <input type="checkbox" name="rev3" id="rev3" value="javascript"> JavaScript<br>   
+    
+                        <i><img src=""></i>
+                        
+                        <small>Error menssage</small>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Mensagem: </td>
+                </tr>
+                <tr>
+                    <td class="valid-form">
+                        <textarea id="ms" name="ms" cols="50" onblur="checkTextarea()" rows="5" placeholder=" Digite sua mensagem aqui:)"></textarea>
+
+                        <i><img src=""></i>
+    
+                        <small>Error menssage</small>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>            
+                        <input type="submit" class="submit" id="btId" value="CADASTRO">            
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
+</body>
+</html>
